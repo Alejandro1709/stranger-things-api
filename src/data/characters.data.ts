@@ -1,11 +1,13 @@
-export const charactersData = [
+import { Character } from 'src/characters/entities/character.entity';
+
+export const charactersData: Character[] = [
   {
     id: 1,
     name: 'Eleven / Jane Hopper',
     actor: 'Millie Bobby Brown',
     description:
       'Una joven con habilidades psíquicas y telequinéticas que escapó del Laboratorio Nacional de Hawkins. Adoptada por Jim Hopper.',
-    status: 'Vivo',
+    status: 'vivo',
     abilities: ['Telequinesis', 'Proyección astral', 'Manipulación sensorial'],
   },
   {
@@ -14,7 +16,7 @@ export const charactersData = [
     actor: 'Finn Wolfhard',
     description:
       'Mejor amigo de Will y novio de Eleven. Líder natural del grupo y estratega del Club Hellfire.',
-    status: 'Vivo',
+    status: 'vivo',
   },
   {
     id: 3,
@@ -22,7 +24,7 @@ export const charactersData = [
     actor: 'Gaten Matarazzo',
     description:
       'El mediador del grupo con un gran amor por la ciencia. Tiene una relación a distancia con Suzie.',
-    status: 'Vivo',
+    status: 'vivo',
   },
   {
     id: 4,
@@ -30,7 +32,7 @@ export const charactersData = [
     actor: 'Caleb McLaughlin',
     description:
       'Miembro del grupo conocido por su pragmatismo. Jugador de baloncesto y novio de Max.',
-    status: 'Vivo',
+    status: 'vivo',
   },
   {
     id: 5,
@@ -38,7 +40,7 @@ export const charactersData = [
     actor: 'Noah Schnapp',
     description:
       'Primera víctima del Demogorgon. Tiene una conexión especial con el Mundo del Revés.',
-    status: 'Vivo',
+    status: 'vivo',
   },
   {
     id: 6,
@@ -46,7 +48,7 @@ export const charactersData = [
     actor: 'Sadie Sink',
     description:
       'Nueva en Hawkins, skater y amante de los videojuegos. Sobreviviente de los ataques de Vecna.',
-    status: 'Vivo',
+    status: 'vivo',
   },
   {
     id: 7,
@@ -54,7 +56,7 @@ export const charactersData = [
     actor: 'Joe Keery',
     description:
       "Ex-rey de la escuela convertido en 'niñera' del grupo. Trabaja en Scoops Ahoy y después en Family Video.",
-    status: 'Vivo',
+    status: 'vivo',
   },
   {
     id: 8,
@@ -62,14 +64,14 @@ export const charactersData = [
     actor: 'Natalia Dyer',
     description:
       'Hermana mayor de Mike y periodista investigadora. Determinada a descubrir la verdad sobre Hawkins.',
-    status: 'Vivo',
+    status: 'vivo',
   },
   {
     id: 9,
     name: 'Jonathan Byers',
     actor: 'Charlie Heaton',
     description: 'Hermano mayor de Will y fotógrafo talentoso. Novio de Nancy.',
-    status: 'Vivo',
+    status: 'vivo',
   },
   {
     id: 10,
@@ -77,7 +79,7 @@ export const charactersData = [
     actor: 'David Harbour',
     description:
       'Jefe de policía de Hawkins y padre adoptivo de Eleven. Sobreviviente de prisión rusa.',
-    status: 'Vivo',
+    status: 'vivo',
   },
   {
     id: 11,
@@ -85,7 +87,7 @@ export const charactersData = [
     actor: 'Winona Ryder',
     description:
       'Madre de Will y Jonathan. Incansable protectora de sus hijos y pareja de Hopper.',
-    status: 'Vivo',
+    status: 'vivo',
   },
   {
     id: 12,
@@ -93,6 +95,6 @@ export const charactersData = [
     actor: 'Dacre Montgomery',
     description:
       'Hermanastro de Max. Sacrificó su vida para salvar a Eleven del Azotamentes.',
-    status: 'Muerto',
+    status: 'muerto',
   },
 ];
