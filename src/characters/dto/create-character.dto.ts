@@ -22,7 +22,7 @@ export class CreateCharacterDto {
   @IsNotEmpty()
   @IsString()
   @IsIn(['vivo', 'muerto', 'desconocido'], {
-    message: 'Status debe ser vivo, muerto o desconocido',
+    message: 'Status must be either vivo, muerto or desconocido',
   })
   status: string;
 
