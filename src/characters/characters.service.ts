@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateCharacterDto } from './dto/create-character.dto';
 import { UpdateCharacterDto } from './dto/update-character.dto';
 import { Character } from './entities/character.entity';
@@ -24,7 +24,13 @@ export class CharactersService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} character`;
+    const character = this.characters.find((c) => c.id === id);
+
+    if (!character) {
+      throw new NotFoundException('Character not found');
+    }
+
+    return character;
   }
 
   update(id: number, updateCharacterDto: UpdateCharacterDto) {
