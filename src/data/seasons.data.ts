@@ -1,4 +1,6 @@
-export const seasons = [
+import { Season } from 'src/seasons/entities/season.entity';
+
+export const seasonsData: Season[] = [
   {
     id: 1,
     number: 1,
