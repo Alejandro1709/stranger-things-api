@@ -34,10 +34,19 @@ export class CharactersService {
   }
 
   update(id: number, updateCharacterDto: UpdateCharacterDto) {
-    return `This action updates a #${id} character`;
+    const character = this.findOne(id);
+
+    return {
+      ...character,
+      ...updateCharacterDto,
+    };
   }
 
   remove(id: number) {
-    return `This action removes a #${id} character`;
+    const character = this.findOne(id);
+
+    this.characters = this.characters.filter((c) => c.id !== id);
+
+    return character;
   }
 }
