@@ -1,4 +1,6 @@
-export const locations = [
+import { Location } from 'src/locations/entities/location.entity';
+
+export const locationsData: Location[] = [
   {
     id: 1,
     name: 'Hawkins, Indiana',
