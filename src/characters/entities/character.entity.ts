@@ -3,6 +3,6 @@ export class Character {
   name: string;
   actor: string;
   description: string;
-  status: 'vivo' | 'muerto' | 'desconocido';
+  status: string;
   abilities?: string[];
 }
