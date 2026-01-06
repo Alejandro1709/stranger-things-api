@@ -1,26 +1,52 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateLocationDto } from './dto/create-location.dto';
 import { UpdateLocationDto } from './dto/update-location.dto';
+import { locationsData } from 'src/data/locations.data';
+import { Location } from './entities/location.entity';
 
 @Injectable()
 export class LocationsService {
+  private locations: Location[] = structuredClone(locationsData);
+
   create(createLocationDto: CreateLocationDto) {
-    return 'This action adds a new location';
+    const newLocation: Location = {
+      id: this.locations.length + 1,
+      ...createLocationDto,
+    };
+
+    this.locations.push(newLocation);
+
+    return newLocation;
   }
 
   findAll() {
-    return `This action returns all locations`;
+    return this.locations;
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} location`;
+    const location = this.locations.find((location) => location.id === id);
+
+    if (!location) {
+      throw new NotFoundException('Location not found');
+    }
+
+    return location;
   }
 
   update(id: number, updateLocationDto: UpdateLocationDto) {
-    return `This action updates a #${id} location`;
+    const location = this.findOne(id);
+
+    return {
+      ...location,
+      ...updateLocationDto,
+    };
   }
 
   remove(id: number) {
-    return `This action removes a #${id} location`;
+    const location = this.findOne(id);
+
+    this.locations = this.locations.filter((location) => location.id !== id);
+
+    return location;
   }
 }
